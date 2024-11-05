@@ -137,24 +137,24 @@ Nodo* criar_arvore(){
     Nodo *raiz = criar_nodo("Prefere algo ao ar livre ou ambientes fechados?", "(esquerda) Ao ar livre", "(direita) Ambientes Fechados");
 
     // Ambientes Fechados
-    Nodo *fechado = criar_nodo("Prefere um Hobby manual ou intelectual?", "(esquerda) Intelectual", "(direita) Manual");
-    raiz->direita = fechado;
+    Nodo *ambiente_fechado = criar_nodo("Prefere um Hobby manual ou intelectual?", "(esquerda) Intelectual", "(direita) Manual");
+    raiz->direita = ambiente_fechado;
 
     // Manual
-    arvore_manual(fechado);
+    arvore_manual(ambiente_fechado);
 
     // Intelectual
-    arvore_intelectual(fechado);
+    arvore_intelectual(ambiente_fechado);
 
     // Ao ar livre
-    Nodo *arLivre = criar_nodo("Prefere algo relaxante ou cheio de adrenalina?", "(esquerda) Relaxante", "(direita) Cheio de Adrenalina");
-    raiz->esquerda = arLivre;
+    Nodo *ar_livre = criar_nodo("Prefere algo relaxante ou cheio de adrenalina?", "(esquerda) Relaxante", "(direita) Cheio de Adrenalina");
+    raiz->esquerda = ar_livre;
 
     // Relaxante
-    arvore_relaxante(arLivre);
+    arvore_relaxante(ar_livre);
 
     // Cheio de Adrenalina
-    arvore_adrenalina(arLivre);
+    arvore_adrenalina(ar_livre);
 
     return raiz;
 }
